@@ -8,8 +8,8 @@
 const int IR_R0 = A0;   //PF7
 const int IR_L0 = A3;   //PF4
 const int IR_R1 = A1;   //PF6
-const int IR_L1 = A2;   //PF5  The sensor pins were changed slightly
-const int AIN1 = 7;     //     This pin was changed from PD6 because the pro micro didnt have a pin for that
+const int IR_L1 = A2;   //PF5
+const int AIN1 = 7;     //PE6  
 const int AIN2 = 4;     //PD4
 const int BIN1 = 9;     //PB5
 const int BIN2 = 5;     //PC6 
@@ -54,6 +54,6 @@ void loop() {
   digitalWrite(AIN1,LOW);
   digitalWrite(AIN2,HIGH);
   digitalWrite(BIN1,LOW);
-  digitalWrite(BIN2,HIGH);              //Setup to make the motors move CCW which is forward in my case
+  digitalWrite(BIN2,HIGH);              //Setup to make the motors move CCW which is forward in this case
   Move_Forward();
   }
