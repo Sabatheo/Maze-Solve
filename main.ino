@@ -22,14 +22,10 @@ volatile unsigned long enc_L = 0;
 volatile unsigned long enc_R = 0;
 const int base_speed_R = 105;              //Initial speed for motors. After direction has been adjusted they return to this speed
 const int base_speed_L = 110;
-int L;
-int R;
-int R_motorspeed;
-int L_motorspeed;
 void setup() {
   Init3DoT();
   Serial.begin(9600);
-  delay(3000);                          //3 Second delay for setup before robot starts moving
+  delay(3000);                             //3 Second delay for setup before robot starts moving
   digitalWrite(STBY,HIGH);
   digitalWrite(AIN1,LOW);
   digitalWrite(AIN2,HIGH);
